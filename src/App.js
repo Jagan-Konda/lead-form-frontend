@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import './App.css'
 
-const API_URL = 'https://lead-form-backend.onrender.com'
+const API_URL = 'https://lead-form-backend.onrender.com/api/lead'
 
 
 const App = () => {
@@ -49,6 +49,7 @@ const App = () => {
           setShowPopup(true)
           setFormData({ name: '', email: '', company: '', message: '' })
         } else {
+          console.Console.log("Failed")
           alert(data.error || 'Submission failed')
         }
       } catch (error) {
